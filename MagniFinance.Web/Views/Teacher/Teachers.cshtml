@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Teacher List";
+}
+
+<div class="jumbotron">
+    <h1>Teachers</h1>
+</div>
+
+<div ng-controller="TeacherController">
+    <div class="row">
+        <a class="btn btn-info" href="/teacher/form">New</a>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Birthday</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col">#</th>
+                    <th scope="col">#</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="teacher in teachers">
+                <tr>
+                    <td>{{ teacher.Name }}</td>
+                    <td>{{ teacher.Birthday.slice(6, -2) | date: 'MM/dd/yyyy' }}</td>
+                    <td>{{ teacher.Salary }}</td>
+                    <td><a class="btn btn-info" href="/teacher/form/{{teacher.ID}}">Update</td>
+                    <td><a class="btn btn-info" href="" ng-click="deleteTeacher(teacher.ID)">Delete</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+@section scripts{
+    @Scripts.Render("~/Scripts/controllers/TeacherController.js")
+}

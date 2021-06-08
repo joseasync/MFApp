@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Create";
+}
+
+<div class="jumbotron">
+    <h1>Teacher</h1>
+</div>
+
+<div ng-controller="TeacherController">
+
+    <form name="teacherForm">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input class="form-control" type="text" name="name" ng-model="data.Name" ng-minlength="3" ng-maxlength="200" required />
+                    <div ng-messages="teacherForm.name.$error" role="alert">
+                        <code class="ie" ng-message="required">You did not enter a field</code>
+                        <code class="ie" ng-message="minlength">Your field is too short</code>
+                        <code class="ie" ng-message="maxlength">Your field is too long</code>
+                        <code class="ie" ng-message-default>This field has an input error</code>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label>Salary</label>
+                    <input class="form-control" type="number" name="registrationnumber" ng-model="data.Salary" ng-minlength="1" ng-maxlength="8" ui-mask-placeholder required />
+                    <div ng-messages="teacherForm.registrationnumber.$error" role="alert">
+                        <code class="ie" ng-message="required">You did not enter a field</code>
+                        <code class="ie" ng-message="minlength">Your field is too short</code>
+                        <code class="ie" ng-message="maxlength">Your field is too long</code>
+                        <code class="ie" ng-message-default>This field has an input error</code>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Birthday</label>
+                    <input type="date" data-date="" data-date-format="DD MM YYYY" ng-model="data.Birthday">
+                    <div ng-messages="teacherForm.birthday.$error" role="alert">
+                        <code class="ie" ng-message="required">You did not enter a field</code>
+                        <code class="ie" ng-message-default>This field has an input error</code>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="button" id="btnSave" onclick="this.disabled=true" ng-disabled="teacherForm.$invalid" class="btn btn-primary" ng-click="savedata()" value="Save" />
+                </div>
+
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+
+    </form>
+</div>
+@section scripts{
+    @Scripts.Render("~/Scripts/controllers/TeacherController.js")
+}

@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Student List";
+}
+
+<div class="jumbotron">
+    <h1>Students</h1>
+</div>
+
+<div ng-controller="StudentController">
+    <div class="row">
+        <a class="btn btn-info" href="/student/form">New</a>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Birthday</th>
+                    <th scope="col">Registration Number</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Grade</th>
+                    <th scope="col">#</th>
+                    <th scope="col">#</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="student in students">
+                <tr>
+                    <td>{{ student.Name }}</td>
+                    <td>{{ student.Birthday.slice(6, -2) | date: 'MM/dd/yyyy' }}</td>
+                    <td>{{ student.RegistrationNumber }}</td>
+                    <td>{{ student.SubjectName }}</td>
+                    <td>{{ student.GradeValue }}</td>
+                    <td><a class="btn btn-info" href="/student/form/{{student.ID}}">Update</td>
+                    <td><a class="btn btn-info" href="" ng-click="deleteStudent(student.ID)">Delete</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+@section scripts{
+    @Scripts.Render("~/Scripts/controllers/StudentController.js")
+}

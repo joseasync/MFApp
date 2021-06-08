@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Create";
+}
+
+<div class="jumbotron">
+    <h1>Grade</h1>
+</div>
+
+<div ng-controller="GradeController">
+
+    <form name="gradeForm">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+
+                <div class="form-group">
+                    <label>Subject</label>
+                    <select ng-model="data.SubjectId"
+                            ng-options="subject.ID as subject.Name for subject in subjects" ng-selected="data.SubjectId" required>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Student</label>
+                    <select ng-model="data.StudentId"
+                            ng-options="student.ID as student.Name for student in students" ng-selected="data.StudentId" required>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Grade</label>
+                    <input class="form-control" type="number" name="gradeValue" ng-model="data.GradeValue" ng-minlength="1" ui-mask-placeholder required />
+                    <div ng-messages="subjectForm.gradeValue.$error" role="alert">
+                        <code class="ie" ng-message="required">You did not enter a field</code>
+                        <code class="ie" ng-message="minlength">Your field is too short</code>
+                        <code class="ie" ng-message="maxlength">Your field is too long</code>
+                        <code class="ie" ng-message-default>This field has an input error</code>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="button" id="btnSave" onclick="this.disabled=true" ng-disabled="gradeForm.$invalid" class="btn btn-primary" ng-click="savedata()" value="Save" />
+                </div>
+
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+
+    </form>
+</div>
+@section scripts{
+    @Scripts.Render("~/Scripts/controllers/GradeController.js")
+}

@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagniFinance.Domain", "MagniFinance.Domain\MagniFinance.Domain.csproj", "{FD8DBDA5-289E-47AC-A606-CE835C8D6C83}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagniFinance.Data", "MagniFinance.Data\MagniFinance.Data.csproj", "{E735CF38-31F1-46D9-B844-97B3125CF3E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagniFinance.Service", "MagniFinance.Service\MagniFinance.Service.csproj", "{4692FAA1-84ED-4F40-9DD8-060241B28912}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagniFinance.Web", "MagniFinance.Web\MagniFinance.Web.csproj", "{A3707C2E-F6EE-4609-8F39-F215E29B6D61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagniFinance.E2ETest", "MagniFinance.E2ETest\MagniFinance.E2ETest.csproj", "{B5A56FF1-00D0-4256-B660-C4552AC3C079}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD8DBDA5-289E-47AC-A606-CE835C8D6C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD8DBDA5-289E-47AC-A606-CE835C8D6C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD8DBDA5-289E-47AC-A606-CE835C8D6C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD8DBDA5-289E-47AC-A606-CE835C8D6C83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E735CF38-31F1-46D9-B844-97B3125CF3E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E735CF38-31F1-46D9-B844-97B3125CF3E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E735CF38-31F1-46D9-B844-97B3125CF3E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E735CF38-31F1-46D9-B844-97B3125CF3E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4692FAA1-84ED-4F40-9DD8-060241B28912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4692FAA1-84ED-4F40-9DD8-060241B28912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4692FAA1-84ED-4F40-9DD8-060241B28912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4692FAA1-84ED-4F40-9DD8-060241B28912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3707C2E-F6EE-4609-8F39-F215E29B6D61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3707C2E-F6EE-4609-8F39-F215E29B6D61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3707C2E-F6EE-4609-8F39-F215E29B6D61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3707C2E-F6EE-4609-8F39-F215E29B6D61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5A56FF1-00D0-4256-B660-C4552AC3C079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5A56FF1-00D0-4256-B660-C4552AC3C079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5A56FF1-00D0-4256-B660-C4552AC3C079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5A56FF1-00D0-4256-B660-C4552AC3C079}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CFDD314B-1465-417E-B45C-2398209E6C51}
+	EndGlobalSection
+EndGlobal

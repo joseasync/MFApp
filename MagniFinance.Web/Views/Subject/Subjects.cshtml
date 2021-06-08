@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Subject List";
+}
+
+<div class="jumbotron">
+    <h1>Subjects</h1>
+</div>
+
+<div ng-controller="SubjectController">
+    <div class="row">
+        <a class="btn btn-info" href="/subject/form">New</a>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Teacher</th>
+                    <th scope="col">Students</th>
+                    <th scope="col">Avarage Grade</th>
+                    <th scope="col">#</th>
+                    <th scope="col">#</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="subject in subjects">
+                <tr>
+                    <td>{{ subject.Name }}</td>
+                    <td>{{ subject.TeacherName }}</td>
+                    <td>{{ subject.StudentsCount }}</td>
+                    <td>{{ subject.AvarageGrades }}</td>
+                    <td><a class="btn btn-info" href="/subject/form/{{subject.ID}}">Update</td>
+                    <td><a class="btn btn-info" href="" ng-click="deleteSubject(subject.ID)">Delete</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+@section scripts{
+    @Scripts.Render("~/Scripts/controllers/SubjectController.js")
+}
